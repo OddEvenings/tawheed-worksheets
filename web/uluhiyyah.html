@@ -1,0 +1,182 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body>
+<title>Tawheed al-Uluhiyyah Worksheet</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Fredoka:wght@500;600&family=Nunito:wght@400;600;700;800&display=swap"><style>
+/* Layout: one centered column of activity "cards" like a worksheet, sticky progress bar at the bottom */
+:root{--accent:#2a4f8f;--accent-soft:#e4ecf8;--bg:#f6f8f7;--surface:#ffffff;--ink:#1c2a2f;--muted:#5b6b70;--line:#d5dedc;--good:#1e8a4c;--good-soft:#e1f5e8;--bad:#c2410c;--bad-soft:#fdeee4;--gold:#a66a00;--gold-soft:#fff5dc;--src:#1d5fa8;
+--display:'Fredoka','Nunito',system-ui,sans-serif;--body:'Nunito',system-ui,sans-serif;--arabic:'Amiri','Traditional Arabic',serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--accent:#8fb3f0;--accent-soft:#1b2a45;--bg:#111816;--surface:#1a2321;--ink:#e6eeec;--muted:#9fb0ad;--line:#2f3d3a;--good:#5fd393;--good-soft:#173a27;--bad:#ff9a66;--bad-soft:#3d2416;--gold:#f0c060;--gold-soft:#3a2f14;--src:#8fbcf0;color-scheme:dark}}
+:root[data-theme="dark"]{--accent:#8fb3f0;--accent-soft:#1b2a45;--bg:#111816;--surface:#1a2321;--ink:#e6eeec;--muted:#9fb0ad;--line:#2f3d3a;--good:#5fd393;--good-soft:#173a27;--bad:#ff9a66;--bad-soft:#3d2416;--gold:#f0c060;--gold-soft:#3a2f14;--src:#8fbcf0;color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.5;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 110px}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+header{text-align:center;display:flex;flex-direction:column;gap:6px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800}
+h1{font-family:var(--display);font-weight:600;color:var(--accent);font-size:clamp(30px,6vw,42px);line-height:1.1;margin:0;text-wrap:balance}
+.sub{margin:0;color:var(--muted)}
+.name{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:6px}
+.name label{font-weight:800}
+.name input{font:inherit;padding:8px 12px;border:2px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);min-width:0;width:240px;max-width:100%}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.learn{border:2px solid var(--accent);background:var(--accent-soft)}
+.learn h2,.card h2{font-family:var(--display);font-weight:600;font-size:22px;margin:0;color:var(--accent);display:flex;align-items:center;gap:10px}
+.learn p{margin:0}
+.num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--surface);display:inline-grid;place-items:center;font-size:17px}
+.hint{margin:-4px 0 0;color:var(--muted);font-size:15px}
+.ayah{border-inline-start:4px solid var(--accent);padding:6px 12px;display:flex;flex-direction:column;gap:2px}
+.ar{font-family:var(--arabic);font-size:26px;direction:rtl;text-align:right;line-height:1.6;margin:0}
+.ref{color:var(--muted);font-size:14px}
+.saw{font-family:var(--arabic);font-size:1.15em}
+.lesson{border:2px solid var(--gold);background:var(--gold-soft)}
+.lesson h2{color:var(--gold)}
+.bank{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;border:2px dashed var(--accent);border-radius:12px;padding:8px;font-weight:800}
+.bank span{padding:2px 10px}
+ol.items{margin:0;padding-left:26px;display:flex;flex-direction:column;gap:12px}
+ol.items>li{padding-left:4px}
+select{font:inherit;font-weight:700;color:var(--accent);background:var(--surface);border:2px solid var(--line);border-bottom:3px solid var(--accent);border-radius:8px;padding:2px 6px;margin:0 4px;max-width:100%}
+.opts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.opt{font:inherit;font-weight:700;color:var(--ink);background:var(--surface);border:2px solid var(--line);border-radius:999px;padding:6px 16px;cursor:pointer;min-height:40px}
+.opt:hover{border-color:var(--accent)}
+.opt[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:var(--surface)}
+.matchgrid{display:grid;grid-template-columns:1fr;gap:12px}
+.letters{display:flex;flex-direction:column;gap:6px;background:var(--accent-soft);border-radius:12px;padding:10px 14px}
+.letters div b{color:var(--accent);margin-right:8px}
+.mrow{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.mrow .q{flex:1 1 220px;min-width:0}
+textarea{font:inherit;width:100%;min-height:76px;border:2px solid var(--line);border-radius:10px;padding:8px 10px;background:var(--surface);color:var(--ink);resize:vertical}
+.pad{display:flex;flex-direction:column;gap:8px}
+canvas{width:100%;height:280px;border:2px dashed var(--line);border-radius:12px;background:#ffffff;touch-action:none;cursor:crosshair}
+.tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.sw{width:32px;height:32px;border-radius:50%;border:3px solid var(--surface);outline:2px solid var(--line);cursor:pointer;padding:0}
+.sw[aria-pressed="true"]{outline:3px solid var(--accent)}
+.btn{font:inherit;font-weight:800;border-radius:12px;padding:10px 18px;border:2px solid var(--accent);background:var(--surface);color:var(--accent);cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--surface)}
+.btn.small{padding:4px 12px;font-size:15px}
+.mark{display:none;font-weight:800;font-size:15px;margin-left:6px;padding:1px 10px;border-radius:999px;white-space:nowrap}
+.checked .mark{display:inline-block}
+.ok .mark{color:var(--good);background:var(--good-soft)}
+.no .mark{color:var(--bad);background:var(--bad-soft)}
+.checked .ok select,.checked select.ok{border-color:var(--good)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:1px solid var(--line);padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));z-index:5}
+.bar .in{max-width:760px;margin:0 auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.score{font-weight:800}
+.score .big{font-family:var(--display);font-size:22px;color:var(--accent)}
+.confirm{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+footer{text-align:center;color:var(--muted);font-size:13px}
+.src{display:block;font-size:13px;color:var(--src);margin-top:4px;line-height:1.35}
+.src::before{content:"Source: ";font-weight:800}
+.hw{font-family:'Patrick Hand','Fredoka',cursive;color:var(--bad);font-size:1.15em}
+@media (prefers-reduced-motion:no-preference){.opt,.btn{transition:background .15s,border-color .15s,color .15s}}
+</style>
+<div class="wrap">
+<header><span class="eyebrow">Tawheed worksheet · Grades 3–4</span><h1>Tawheed al-Uluhiyyah</h1><p class="sub">Worshipping Allah alone</p>
+<div class="name"><label for="nm">My name:</label><input id="nm" autocomplete="off" placeholder="Type your name"></div></header>
+<section class="card learn"><h2>Let's Learn</h2><p><b>Tawheed al-Uluhiyyah</b> means to <b>worship Allah alone</b>. It is the meaning of <b>Laa ilaaha illallaah</b>: <i>"None has the right to be worshipped except Allah."</i></p>
+<p><b>Worship ('ibadah)</b> is everything Allah loves and is pleased with, of what we say and do, outwardly and inwardly: salah, du'a, fasting, charity, sacrifice, asking for help, trusting Allah (tawakkul), love, fear and hope.</p>
+<p>Giving any worship to other than Allah is <b>shirk</b>, the biggest sin of all.</p></section><section class="card"><div class="ayah"><p class="ar" lang="ar">وَمَا خَلَقْتُ الْجِنَّ وَالْإِنسَ إِلَّا لِيَعْبُدُونِ</p><p style="margin:0">"And I did not create the jinn and mankind except to <b>worship Me</b>." <span class="ref">(adh-Dhariyat 51:56)</span></p></div><div class="ayah"><p class="ar" lang="ar">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</p><p style="margin:0">"<b>You alone</b> we worship, and You alone we ask for help." <span class="ref">(al-Fatihah 1:5)</span></p></div><div class="ayah"><p style="margin:0">The Prophet <span class="saw">ﷺ</span> said: <b>"Du'a is worship."</b> <span class="ref">(Abu Dawud 1479, at-Tirmidhi 2969)</span><br>He <span class="saw">ﷺ</span> taught young Ibn 'Abbas: <b>"If you ask, ask Allah. If you seek help, seek help from Allah."</b> <span class="ref">(at-Tirmidhi 2516)</span></p></div></section>
+<div id="acts" class="wrap" style="max-width:none"></div>
+<footer>Reference: <i>The Foundations of Faith in the Light of the Qur'an and the Sunnah</i>, Section One, Chapter Two (pp. 21–43, 85). Your answers stay saved on this device.</footer>
+</div>
+<div class="bar"><div class="in"><span class="score" id="score" aria-live="polite"></span>
+<span class="confirm"><button class="btn" id="reset" type="button">Start over</button><span id="confirm" class="confirm" hidden><span>Erase all answers?</span><button class="btn small" id="yes" type="button">Yes, erase</button><button class="btn small" id="no" type="button">Keep them</button></span>
+<button class="btn primary" id="check" type="button">Check my answers</button></span></div></div>
+<script>const DATA="eyJpZCI6ICJ1bHVoaXl5YWgiLCAidGl0bGUiOiAiVGF3aGVlZCBhbC1VbHVoaXl5YWgiLCAic3ViIjogIldvcnNoaXBwaW5nIEFsbGFoIGFsb25lIiwgImxpZ2h0IjogWyIjMmE0ZjhmIiwgIiNlNGVjZjgiXSwgImRhcmsiOiBbIiM4ZmIzZjAiLCAiIzFiMmE0NSJdLCAicmVmIjogIlNlY3Rpb24gT25lLCBDaGFwdGVyIFR3byAocHAuIDIxXHUyMDEzNDMsIDg1KSIsICJsZWFybiI6ICI8cD48Yj5UYXdoZWVkIGFsLVVsdWhpeXlhaDwvYj4gbWVhbnMgdG8gPGI+d29yc2hpcCBBbGxhaCBhbG9uZTwvYj4uIEl0IGlzIHRoZSBtZWFuaW5nIG9mIDxiPkxhYSBpbGFhaGEgaWxsYWxsYWFoPC9iPjogPGk+XCJOb25lIGhhcyB0aGUgcmlnaHQgdG8gYmUgd29yc2hpcHBlZCBleGNlcHQgQWxsYWguXCI8L2k+PC9wPlxuPHA+PGI+V29yc2hpcCAoJ2liYWRhaCk8L2I+IGlzIGV2ZXJ5dGhpbmcgQWxsYWggbG92ZXMgYW5kIGlzIHBsZWFzZWQgd2l0aCwgb2Ygd2hhdCB3ZSBzYXkgYW5kIGRvLCBvdXR3YXJkbHkgYW5kIGlud2FyZGx5OiBzYWxhaCwgZHUnYSwgZmFzdGluZywgY2hhcml0eSwgc2FjcmlmaWNlLCBhc2tpbmcgZm9yIGhlbHAsIHRydXN0aW5nIEFsbGFoICh0YXdha2t1bCksIGxvdmUsIGZlYXIgYW5kIGhvcGUuPC9wPlxuPHA+R2l2aW5nIGFueSB3b3JzaGlwIHRvIG90aGVyIHRoYW4gQWxsYWggaXMgPGI+c2hpcms8L2I+LCB0aGUgYmlnZ2VzdCBzaW4gb2YgYWxsLjwvcD4iLCAibGVhcm5fc3JjIjogIkZvRiBwLiAyMSAobWVhbmluZyksIHAuIDMzIChMYWEgaWxhYWhhIGlsbGFsbGFhaCwgTXVzbGltIDIzKSwgcC4gMzQgKCdpYmFkYWgpLCBwcC4gMzhcdTIwMTM0MyAoZm9ybXMgb2Ygd29yc2hpcCksIHAuIDg1IChzaGlyaykiLCAiYXlhdCI6IFtbIlx1MDY0OFx1MDY0ZVx1MDY0NVx1MDY0ZVx1MDYyNyBcdTA2MmVcdTA2NGVcdTA2NDRcdTA2NGVcdTA2NDJcdTA2NTJcdTA2MmFcdTA2NGYgXHUwNjI3XHUwNjQ0XHUwNjUyXHUwNjJjXHUwNjUwXHUwNjQ2XHUwNjRlXHUwNjUxIFx1MDY0OFx1MDY0ZVx1MDYyN1x1MDY0NFx1MDY1Mlx1MDYyNVx1MDY1MFx1MDY0Nlx1MDYzM1x1MDY0ZSBcdTA2MjVcdTA2NTBcdTA2NDRcdTA2NGVcdTA2NTFcdTA2MjcgXHUwNjQ0XHUwNjUwXHUwNjRhXHUwNjRlXHUwNjM5XHUwNjUyXHUwNjI4XHUwNjRmXHUwNjJmXHUwNjRmXHUwNjQ4XHUwNjQ2XHUwNjUwIiwgIlwiQW5kIEkgZGlkIG5vdCBjcmVhdGUgdGhlIGppbm4gYW5kIG1hbmtpbmQgZXhjZXB0IHRvIDxiPndvcnNoaXAgTWU8L2I+LlwiIiwgImFkaC1EaGFyaXlhdCA1MTo1NiJdLCBbIlx1MDYyNVx1MDY1MFx1MDY0YVx1MDY0ZVx1MDY1MVx1MDYyN1x1MDY0M1x1MDY0ZSBcdTA2NDZcdTA2NGVcdTA2MzlcdTA2NTJcdTA2MjhcdTA2NGZcdTA2MmZcdTA2NGYgXHUwNjQ4XHUwNjRlXHUwNjI1XHUwNjUwXHUwNjRhXHUwNjRlXHUwNjUxXHUwNjI3XHUwNjQzXHUwNjRlIFx1MDY0Nlx1MDY0ZVx1MDYzM1x1MDY1Mlx1MDYyYVx1MDY0ZVx1MDYzOVx1MDY1MFx1MDY0YVx1MDY0Nlx1MDY0ZiIsICJcIjxiPllvdSBhbG9uZTwvYj4gd2Ugd29yc2hpcCwgYW5kIFlvdSBhbG9uZSB3ZSBhc2sgZm9yIGhlbHAuXCIiLCAiYWwtRmF0aWhhaCAxOjUiXV0sICJleHRyYSI6ICJUaGUgUHJvcGhldCA8c3BhbiBjbGFzcz1cInNhd1wiPlx1ZmRmYTwvc3Bhbj4gc2FpZDogPGI+XCJEdSdhIGlzIHdvcnNoaXAuXCI8L2I+IDxzcGFuIGNsYXNzPVwicmVmXCI+KEFidSBEYXd1ZCAxNDc5LCBhdC1UaXJtaWRoaSAyOTY5KTwvc3Bhbj48YnI+SGUgPHNwYW4gY2xhc3M9XCJzYXdcIj5cdWZkZmE8L3NwYW4+IHRhdWdodCB5b3VuZyBJYm4gJ0FiYmFzOiA8Yj5cIklmIHlvdSBhc2ssIGFzayBBbGxhaC4gSWYgeW91IHNlZWsgaGVscCwgc2VlayBoZWxwIGZyb20gQWxsYWguXCI8L2I+IDxzcGFuIGNsYXNzPVwicmVmXCI+KGF0LVRpcm1pZGhpIDI1MTYpPC9zcGFuPiIsICJsZXNzb24iOiBudWxsLCAic2VjdGlvbnMiOiBbeyJ0eXBlIjogImZpbGwiLCAidGl0bGUiOiAiRmlsbCBpbiB0aGUgQmxhbmtzIiwgImhpbnQiOiAiUGljayB0aGUgcmlnaHQgd29yZCBmb3IgZWFjaCBibGFuay4iLCAiYmFuayI6IFsid29yc2hpcCIsICJBbGxhaCIsICJzaGlyayIsICJEdSdhIiwgInByb3BoZXRzIl0sICJpdGVtcyI6IFt7InByZSI6ICJBbGxhaCBjcmVhdGVkIHVzIHRvIiwgImFucyI6ICJ3b3JzaGlwIiwgInBvc3QiOiAiSGltIGFsb25lLiIsICJzcmMiOiAiYWRoLURoYXJpeWF0IDUxOjU2OyBGb0YgcC4gMjMifSwgeyJwcmUiOiAiTGFhIGlsYWFoYSBpbGxhbGxhYWggbWVhbnM6IG5vbmUgaGFzIHRoZSByaWdodCB0byBiZSB3b3JzaGlwcGVkIGV4Y2VwdCIsICJhbnMiOiAiQWxsYWgiLCAicG9zdCI6ICIuIiwgInNyYyI6ICJGb0YgcC4gMzMgKE11c2xpbSAyMyksIHAuIDIxIn0sIHsicHJlIjogIkdpdmluZyB3b3JzaGlwIHRvIGFueW9uZSBvdGhlciB0aGFuIEFsbGFoIGlzIGNhbGxlZCIsICJhbnMiOiAic2hpcmsiLCAicG9zdCI6ICIuIiwgInNyYyI6ICJGb0YgcC4gODUgKHNwZWNpZmljIG1lYW5pbmcgb2YgU2hpcmspIn0sIHsicHJlIjogIlRoZSBQcm9waGV0IDxzcGFuIGNsYXNzPVwic2F3XCI+XHVmZGZhPC9zcGFuPiBzYWlkOiBcIiIsICJhbnMiOiAiRHUnYSIsICJwb3N0IjogImlzIHdvcnNoaXAuXCIiLCAic3JjIjogIkFidSBEYXd1ZCAxNDc5LCBhdC1UaXJtaWRoaSAyOTY5OyBGb0YgcC4gMjYgKG5vdGU6IER1J2EgaXMgYW4gYWN0IG9mIHdvcnNoaXApLCBwLiAzOCJ9LCB7InByZSI6ICJBbGwgb2YgdGhlIiwgImFucyI6ICJwcm9waGV0cyIsICJwb3N0IjogImNhbGxlZCB0aGVpciBwZW9wbGUgdG8gd29yc2hpcCBBbGxhaCBhbG9uZS4iLCAic3JjIjogImFuLU5haGwgMTY6MzYsIGFsLUFuYml5YSAyMToyNTsgRm9GIHAuIDI0LCBwcC4gMjhcdTIwMTMyOSJ9XX0sIHsidHlwZSI6ICJtdWx0aSIsICJ0aXRsZSI6ICJJcyBJdCBXb3JzaGlwPyIsICJoaW50IjogIlRhcCBldmVyeSBhY3Qgb2Ygd29yc2hpcCB0aGF0IHdlIGdpdmUgb25seSB0byBBbGxhaC4gVGhlcmUgaXMgbW9yZSB0aGFuIG9uZSEiLCAib3B0cyI6IFsiUHJheWluZyBzYWxhaCIsICJNYWtpbmcgZHUnYSIsICJCcnVzaGluZyBteSB0ZWV0aCIsICJGYXN0aW5nIGluIFJhbWFkYW4iLCAiU2F5aW5nIFwiQWxsYWh1IEFrYmFyXCIiLCAiUGxheWluZyBmb290YmFsbCIsICJUcnVzdGluZyBpbiBBbGxhaCIsICJHaXZpbmcgc2FkYXFhaCIsICJFYXRpbmcgbHVuY2giLCAiUmVhZGluZyB0aGUgUXVyJ2FuIiwgIlNhY3JpZmljaW5nIGFuIGFuaW1hbCBvbiBFaWQiXSwgImFucyI6IFswLCAxLCAzLCA0LCA2LCA3LCA5LCAxMF0sICJzcmMiOiAiRm9GIHAuIDM4IChkdSdhKSwgcC4gMzkgKHRydXN0L3JlbGlhbmNlKSwgcC4gNDIgKHNhY3JpZmljZSwgYWwtQW4nYW0gNjoxNjIpLCBwLiA0MyAoc2FsYWgsIGZhc3RpbmcsIGNoYXJpdHksIGRoaWtyLCBRdXInYW4gcmVjaXRhdGlvbikifSwgeyJ0eXBlIjogIm1hdGNoIiwgInRpdGxlIjogIk1hdGNoIEl0ISIsICJoaW50IjogIkNob29zZSB0aGUgbGV0dGVyIG9mIHRoZSBjb3JyZWN0IG1lYW5pbmcuIiwgIm9wdHMiOiBbWyJBIiwgIkNhbGxpbmcgdXBvbiBBbGxhaCBhbmQgYXNraW5nIEhpbSJdLCBbIkIiLCAiTm9uZSBoYXMgdGhlIHJpZ2h0IHRvIGJlIHdvcnNoaXBwZWQgZXhjZXB0IEFsbGFoIl0sIFsiQyIsICJSZWx5aW5nIG9uIEFsbGFoIl0sIFsiRCIsICJXb3JzaGlwIl0sIFsiRSIsICJHaXZpbmcgd29yc2hpcCB0byBvdGhlciB0aGFuIEFsbGFoIl1dLCAiaXRlbXMiOiBbeyJxIjogIidJYmFkYWgiLCAiYW5zIjogIkQiLCAic3JjIjogIkZvRiBwLiAzNCAobWVhbmluZyBvZiB3b3JzaGlwKSJ9LCB7InEiOiAiU2hpcmsiLCAiYW5zIjogIkUiLCAic3JjIjogIkZvRiBwLiA4NSJ9LCB7InEiOiAiRHUnYSIsICJhbnMiOiAiQSIsICJzcmMiOiAiRm9GIHBwLiAzOFx1MjAxMzM5IChzdXBwbGljYXRpb24pIn0sIHsicSI6ICJMYWEgaWxhYWhhIGlsbGFsbGFhaCIsICJhbnMiOiAiQiIsICJzcmMiOiAiRm9GIHAuIDMzIChNdXNsaW0gMjMpIn0sIHsicSI6ICJUYXdha2t1bCIsICJhbnMiOiAiQyIsICJzcmMiOiAiRm9GIHAuIDM5IChyZWxpYW5jZSwgYWwtTWEnaWRhaCA1OjIzKSJ9XX0sIHsidHlwZSI6ICJjaG9pY2UiLCAidGl0bGUiOiAiV2hhdCBTaG91bGQgVGhleSBEbz8iLCAiaGludCI6ICJUYXAgdGhlIGJlc3QgYW5zd2VyLiIsICJpdGVtcyI6IFt7InEiOiAiWXVzdWYgaXMgc2ljay4gV2hvIHNob3VsZCBoZSBtYWtlIGR1J2EgdG8/IiwgIm9wdHMiOiBbIkEgcGlvdXMgcGVyc29uJ3MgZ3JhdmUiLCAiQWxsYWgiLCAiQSBsdWNreSBjaGFybSJdLCAiYW5zIjogMSwgInNyYyI6ICJGb0YgcHAuIDM4XHUyMDEzMzkgKGludm9raW5nIHRoZSBkZWFkIGlzIHNoaXJrKSwgcC4gNDYgKEFsbGFoIGlzIHRoZSBIZWFsZXIsIEJ1a2hhcmkgNTc0MyksIHAuIDU4In0sIHsicSI6ICJNYXJ5YW0gaGFzIGEgYmlnIHRlc3QuIFdoYXQgc2hvdWxkIHNoZSBkbz8iLCAib3B0cyI6IFsiU3R1ZHkgYW5kIGFzayBBbGxhaCBmb3IgaGVscCIsICJXZWFyIGFuIGFtdWxldCBmb3IgbHVjayJdLCAiYW5zIjogMCwgInNyYyI6ICJhbC1GYXRpaGFoIDE6NTsgRm9GIHAuIDQxIChzZWVraW5nIGhlbHApLCBwcC4gNDhcdTIwMTM0OSAoYW11bGV0cyBhcmUgc2hpcmspIn0sIHsicSI6ICJXaG8gZG8gd2UgcHJheSBzYWxhaCB0bz8iLCAib3B0cyI6IFsiQWxsYWggYWxvbmUiLCAiVGhlIEthJ2JhaCIsICJUaGUgaW1hbSJdLCAiYW5zIjogMCwgInNyYyI6ICJhbC1BbidhbSA2OjE2MiwgYWwtS2F3dGhhciAxMDg6MjsgRm9GIHAuIDQyIn0sIHsicSI6ICJCaWxhbCBpcyBzY2FyZWQgYXQgbmlnaHQuIFdoYXQgY2FuIGhlIHNheT8iLCAib3B0cyI6IFsiXCJJIHNlZWsgcmVmdWdlIGluIEFsbGFoXCIiLCAiXCJIZWxwIG1lLCBPIGppbm5cIiJdLCAiYW5zIjogMCwgInNyYyI6ICJhbC1GYWxhcSAxMTM6MVx1MjAxMzIsIGFuLU5hcyAxMTQ6MVx1MjAxMzQ7IEZvRiBwLiA0MSAoc2Vla2luZyByZWZ1Z2UpLCBwLiA0NiAoc2Vla2luZyBoZWxwIG9mIGppbm4gaXMgc2hpcmspIn1dfSwgeyJ0eXBlIjogInRmIiwgInRpdGxlIjogIlRydWUgb3IgRmFsc2U/IiwgImhpbnQiOiAiVGFwIFRydWUgb3IgRmFsc2UuIiwgIml0ZW1zIjogW3sicSI6ICJEdSdhIGlzIHdvcnNoaXAsIHNvIHdlIG1ha2UgZHUnYSB0byBBbGxhaCBhbG9uZS4iLCAiYW5zIjogdHJ1ZSwgInNyYyI6ICJhbC1KaW5uIDcyOjE4LCBHaGFmaXIgNDA6MTQ7IEZvRiBwLiAzOCJ9LCB7InEiOiAiSXQgaXMgb2theSB0byBhc2sgYSBkZWFkIHBlcnNvbiBvciBhIHNhaW50IHRvIGhlbHAgdXMuIiwgImFucyI6IGZhbHNlLCAic3JjIjogIkl0IGlzIHNoaXJrLiBGb0YgcHAuIDM4XHUyMDEzMzksIHAuIDU4IChjYWxsaW5nIG9uIHRoZSBkZWFkKSwgcC4gMjYgKEJ1a2hhcmkgNDQ5NykifSwgeyJxIjogIlNoaXJrIGlzIHRoZSBiaWdnZXN0IHNpbi4iLCAiYW5zIjogdHJ1ZSwgInNyYyI6ICJhbi1OaXNhIDQ6NDgsIEx1cW1hbiAzMToxMzsgRm9GIHAuIDg1In0sIHsicSI6ICJXb3JzaGlwIGlzIG9ubHkgc2FsYWgsIG5vdGhpbmcgZWxzZS4iLCAiYW5zIjogZmFsc2UsICJzcmMiOiAiRm9GIHAuIDM4ICh3b3JzaGlwIGlzIG9mIG51bWVyb3VzIHR5cGVzKSwgcHAuIDQyXHUyMDEzNDMifSwgeyJxIjogIkV2ZXJ5IHByb3BoZXQgc2FpZDogXCJXb3JzaGlwIEFsbGFoIGFuZCBzdGF5IGF3YXkgZnJvbSBmYWxzZSBnb2RzLlwiIiwgImFucyI6IHRydWUsICJzcmMiOiAiYW4tTmFobCAxNjozNjsgRm9GIHAuIDI0LCBwLiAyOCJ9XX0sIHsidHlwZSI6ICJ3cml0ZSIsICJ0aXRsZSI6ICJUaGluayBhbmQgV3JpdGUiLCAiaGludCI6ICJZb3VyIHRlYWNoZXIgd2lsbCByZWFkIHRoZXNlLiIsICJpdGVtcyI6IFt7InEiOiAiSW4geW91ciBvd24gd29yZHMsIHdoYXQgZG9lcyA8Yj5MYWEgaWxhYWhhIGlsbGFsbGFhaDwvYj4gbWVhbj8iLCAic2FtcGxlIjogIk9ubHkgQWxsYWggZGVzZXJ2ZXMgdG8gYmUgd29yc2hpcHBlZCwgbm9ib2R5IGVsc2UuIiwgInNyYyI6ICJGb0YgcC4gMzMgKE11c2xpbSAyMyksIHAuIDIxIn0sIHsicSI6ICJXcml0ZSBhIGR1J2EgeW91IGNhbiBhc2sgQWxsYWggZm9yIHRvZGF5LiIsICJzYW1wbGUiOiAiXCJPIEFsbGFoLCBoZWxwIG1lIGRvIHdlbGwgaW4gc2Nob29sIGFuZCBmb3JnaXZlIG1lLlwiIiwgInNyYyI6ICJHaGFmaXIgNDA6NjA7IEZvRiBwLiAzOCAoZHUnYSBpcyB3b3JzaGlwKSwgcC4gMzkgKGR1J2EgYWwtbWFzJ2FsYWgpIn1dfSwgeyJ0eXBlIjogImRyYXciLCAidGl0bGUiOiAiRHJhdyBJdCIsICJoaW50IjogIkRyYXcgeW91cnNlbGYgZG9pbmcgYW4gYWN0IG9mIHdvcnNoaXAgZm9yIEFsbGFoIGFsb25lOiBwcmF5aW5nLCBtYWtpbmcgZHUnYSwgcmVhZGluZyBRdXInYW4gb3IgZ2l2aW5nIGNoYXJpdHkuIiwgInNhbXBsZSI6ICJBbnkgYWN0IG9mIHdvcnNoaXAgZG9uZSBmb3IgQWxsYWg6IHNhbGFoLCBkdSdhLCBRdXInYW4sIHNhZGFxYWgsIGZhc3RpbmcuIiwgInNyYyI6ICJhbC1GYXRpaGFoIDE6NTsgRm9GIHBwLiA0Mlx1MjAxMzQzIChhY3RzIG9mIHRoZSBoZWFydCwgdG9uZ3VlIGFuZCBsaW1icykifV19";
+const W=JSON.parse(decodeURIComponent(escape(atob(DATA))));
+const KEY='tawheed-'+W.id;
+let state={};try{state=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){state={}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+const main=document.getElementById('acts');
+let n=0, gradable=[];
+function el(t,a={},h=''){const e=document.createElement(t);for(const k in a)e.setAttribute(k,a[k]);if(h)e.innerHTML=h;return e}
+function mark(){return '<span class="mark"></span>'}
+W.sections.forEach((S,si)=>{
+  n++;const c=el('section',{class:'card',id:'s'+si});
+  c.innerHTML=`<h2><span class="num">${n}</span>${S.title}</h2><p class="hint">${S.hint}</p>`;
+  if(S.type==='fill'){
+    c.insertAdjacentHTML('beforeend','<div class="bank">'+S.bank.map(w=>`<span>${w}</span>`).join('')+'</div>');
+    const ol=el('ol',{class:'items'});
+    S.items.forEach((it,i)=>{const id=`f${si}_${i}`;const li=el('li');
+      li.innerHTML=`${it.pre} <select id="${id}" aria-label="Blank ${i+1}"><option value="">______</option>${S.bank.map(w=>`<option>${w}</option>`).join('')}</select> ${it.post}${mark()}`;
+      ol.append(li);const s=li.querySelector('select');if(state[id])s.value=state[id];
+      s.onchange=()=>{state[id]=s.value;save();clearMarks()};
+      gradable.push({li,ok:()=>s.value===it.ans});});
+    c.append(ol);
+  }
+  if(S.type==='match'){
+    const g=el('div',{class:'matchgrid'});
+    g.innerHTML='<div class="letters">'+S.opts.map(([l,t])=>`<div><b>${l}</b>${t}</div>`).join('')+'</div>';
+    const ol=el('ol',{class:'items'});
+    S.items.forEach((it,i)=>{const id=`m${si}_${i}`;const li=el('li');
+      li.innerHTML=`<div class="mrow"><span class="q">${it.q}</span><span><select id="${id}" aria-label="Letter for question ${i+1}"><option value="">?</option>${S.opts.map(([l])=>`<option>${l}</option>`).join('')}</select>${mark()}</span></div>`;
+      ol.append(li);const s=li.querySelector('select');if(state[id])s.value=state[id];
+      s.onchange=()=>{state[id]=s.value;save();clearMarks()};
+      gradable.push({li,ok:()=>s.value===it.ans});});
+    g.append(ol);c.append(g);
+  }
+  if(S.type==='choice'||S.type==='tf'){
+    const ol=el('ol',{class:'items'});
+    S.items.forEach((it,i)=>{const id=`c${si}_${i}`;const li=el('li');
+      const opts=S.type==='tf'?['True','False']:it.opts;const ans=S.type==='tf'?(it.ans?0:1):it.ans;
+      li.innerHTML=`${it.q}${mark()}<div class="opts" role="group">${opts.map((o,k)=>`<button type="button" class="opt" data-k="${k}" aria-pressed="${state[id]===k}">${o}</button>`).join('')}</div>`;
+      li.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{state[id]=+b.dataset.k;save();li.querySelectorAll('.opt').forEach(x=>x.setAttribute('aria-pressed',x===b));clearMarks()});
+      ol.append(li);gradable.push({li,ok:()=>state[id]===ans});});
+    c.append(ol);
+  }
+  if(S.type==='multi'){
+    const id=`x${si}`;if(!Array.isArray(state[id]))state[id]=[];
+    const box=el('div',{class:'opts',role:'group'});
+    S.opts.forEach((o,k)=>{const b=el('button',{type:'button',class:'opt','aria-pressed':state[id].includes(k)},o);
+      b.onclick=()=>{const a=state[id];const j=a.indexOf(k);j<0?a.push(k):a.splice(j,1);b.setAttribute('aria-pressed',a.includes(k));save();clearMarks()};box.append(b)});
+    const wrapm=el('div');wrapm.innerHTML=mark();c.append(box,wrapm);
+    gradable.push({li:wrapm,ok:()=>{const a=[...state[id]].sort().join();return a===[...S.ans].sort().join()},multi:true});
+  }
+  if(S.type==='write'){
+    const ol=el('ol',{class:'items',type:'a'});
+    S.items.forEach((it,i)=>{const id=`w${si}_${i}`;const li=el('li');
+      li.innerHTML=`<label for="${id}">${it.q}</label><textarea id="${id}" placeholder="Type your answer here"></textarea>`;
+      const t=li.querySelector('textarea');t.value=state[id]||'';t.oninput=()=>{state[id]=t.value;save()};ol.append(li)});
+    c.append(ol);
+  }
+  if(S.type==='draw'){
+    const pad=el('div',{class:'pad'});
+    const colors=['#1c2a2f','#c2410c','#1e8a4c','#2563eb','#a66a00','#9333ea','#0ea5e9'];
+    pad.innerHTML=`<div class="tools">${colors.map((k,i)=>`<button type="button" class="sw" style="background:${k}" aria-label="Pen color ${i+1}" aria-pressed="${i===0}" data-c="${k}"></button>`).join('')}<button type="button" class="btn small" data-size>Thick pen</button><button type="button" class="btn small" data-clear>Clear drawing</button></div><canvas id="cv${si}" aria-label="Drawing area"></canvas>`;
+    c.append(pad);
+    requestAnimationFrame(()=>setupCanvas(pad,'d'+si));
+  }
+  main.append(c);
+});
+function setupCanvas(pad,id){
+  const cv=pad.querySelector('canvas'),ctx=cv.getContext('2d');let color='#1c2a2f',size=4,drawing=false,last=null;
+  function fit(){const r=cv.getBoundingClientRect(),dpr=window.devicePixelRatio||1;const img=cv.width?cv.toDataURL():null;
+    cv.width=r.width*dpr;cv.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.lineCap='round';ctx.lineJoin='round';
+    const src=img||state[id];if(src){const im=new Image();im.onload=()=>ctx.drawImage(im,0,0,r.width,r.height);im.src=src}}
+  fit();
+  const pos=e=>{const r=cv.getBoundingClientRect();return[e.clientX-r.left,e.clientY-r.top]};
+  cv.onpointerdown=e=>{drawing=true;last=pos(e);cv.setPointerCapture(e.pointerId);ctx.beginPath();ctx.fillStyle=color;ctx.arc(last[0],last[1],size/2,0,7);ctx.fill()};
+  cv.onpointermove=e=>{if(!drawing)return;const p=pos(e);ctx.strokeStyle=color;ctx.lineWidth=size;ctx.beginPath();ctx.moveTo(...last);ctx.lineTo(...p);ctx.stroke();last=p};
+  const end=()=>{if(!drawing)return;drawing=false;try{state[id]=cv.toDataURL('image/png');save()}catch(e){}};
+  cv.onpointerup=end;cv.onpointerleave=end;cv.onpointercancel=end;
+  pad.querySelectorAll('.sw').forEach(b=>b.onclick=()=>{color=b.dataset.c;pad.querySelectorAll('.sw').forEach(x=>x.setAttribute('aria-pressed',x===b))});
+  const sz=pad.querySelector('[data-size]');sz.onclick=()=>{size=size===4?10:4;sz.textContent=size===4?'Thick pen':'Thin pen'};
+  pad.querySelector('[data-clear]').onclick=()=>{const r=cv.getBoundingClientRect();ctx.clearRect(0,0,r.width,r.height);delete state[id];save()};
+  let t;window.addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(fit,150)});
+}
+const scoreEl=document.getElementById('score');
+function clearMarks(){document.body.classList.remove('checked');scoreEl.innerHTML=`<span class="big">${gradable.length}</span> questions to check`}
+function check(){let right=0;gradable.forEach(g=>{const ok=g.ok();right+=ok;g.li.classList.toggle('ok',ok);g.li.classList.toggle('no',!ok);
+  g.li.querySelector('.mark').textContent=ok?'✓ Correct':(g.multi?'✗ Not quite, look again':'✗ Try again')});
+  document.body.classList.add('checked');
+  scoreEl.innerHTML=`<span class="big">${right} / ${gradable.length}</span> ${right===gradable.length?'MashaAllah, all correct!':'correct. Fix the orange ones and check again.'}`;
+  const first=document.querySelector('.no');if(first)first.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'})}
+document.getElementById('check').onclick=check;
+const nm=document.getElementById('nm');nm.value=state.name||'';nm.oninput=()=>{state.name=nm.value;save()};
+const resetBtn=document.getElementById('reset'),conf=document.getElementById('confirm');
+resetBtn.onclick=()=>{conf.hidden=false;resetBtn.hidden=true};
+document.getElementById('no').onclick=()=>{conf.hidden=true;resetBtn.hidden=false};
+document.getElementById('yes').onclick=()=>{state={};save();location.reload()};
+clearMarks();
+</script>
+</body></html>
